@@ -60,6 +60,15 @@ public class Assignment1
         for(int i=0; i<marksList.size(); i++){
             System.out.println("Student "+ (i+1) + " marks: " + marksList.get(i));
         }
+        highestMark = marksList.get(0);
         
+         for(int i=1; i<marksList.size(); i++){
+            
+            if(marksList.get(i) > highestMark){
+                highestMark = marksList.get(i);
+            }
+        }
+            
+          
 }
 }
