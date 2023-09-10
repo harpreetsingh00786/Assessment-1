@@ -18,6 +18,7 @@ public class Assignment1
         String assignmentName;
         final int STUDENTS = 30;
         int assignmentMarks, highestMark, lowestMark;
+        double marksSum = 0, mean;
         
         ArrayList<Integer> marksList = new ArrayList<>();
         
@@ -77,5 +78,16 @@ public class Assignment1
           // display highestMark and lowestMark to the console
         System.out.println("\nHighest Marks: " + highestMark);
         System.out.println("Lowest Marks: " + lowestMark);
+        
+        // calcualte the sum of the marks
+        for(int i=0; i<marksList.size(); i++){
+            marksSum +=  marksList.get(i);
+        }
+        
+        // calcualte and display mean 
+        mean = marksSum / STUDENTS;
+        System.out.println("\nMean: " + mean);
+        
+
 }
 }
