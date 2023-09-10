@@ -18,8 +18,7 @@ public class Assignment1
         String assignmentName;
         final int STUDENTS = 30;
         int assignmentMarks, highestMark, lowestMark;
-        double marksSum = 0, mean;
-        
+        double marksSum = 0, mean, difference, sqrDifference, sumSqrDifference = 0, variance;
         ArrayList<Integer> marksList = new ArrayList<>();
         
         Scanner scanner = new Scanner(System.in);
@@ -88,6 +87,15 @@ public class Assignment1
         mean = marksSum / STUDENTS;
         System.out.println("\nMean: " + mean);
         
-
+        
+        // calculate the sumSqrDifference for the standard deviation
+        for(int i=0; i<marksList.size(); i++){
+            difference = marksList.get(i) -  mean;
+            sqrDifference = difference * difference;
+            sumSqrDifference += sqrDifference;
+        }
+        
+        // calcualte and display standard deviation
+        variance = sumSqrDifference / STUDENTS;
 }
 }
