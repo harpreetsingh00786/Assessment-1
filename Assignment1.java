@@ -18,7 +18,6 @@ public class Assignment1
         String assignmentName;
         final int STUDENTS = 30;
         int assignmentMarks, highestMark, lowestMark;
-        double marksSum = 0, mean, difference, sqrDifference, sumSqrDifference = 0, standardDeviation;
         
         ArrayList<Integer> marksList = new ArrayList<>();
         
@@ -60,15 +59,23 @@ public class Assignment1
         for(int i=0; i<marksList.size(); i++){
             System.out.println("Student "+ (i+1) + " marks: " + marksList.get(i));
         }
+        
         highestMark = marksList.get(0);
+        lowestMark = marksList.get(0);
         
          for(int i=1; i<marksList.size(); i++){
             
             if(marksList.get(i) > highestMark){
                 highestMark = marksList.get(i);
             }
+            
+            if(marksList.get(i) < lowestMark){
+                lowestMark = marksList.get(i);
+            }
         }
             
-          
+          // display highestMark and lowestMark to the console
+        System.out.println("\nHighest Marks: " + highestMark);
+        System.out.println("Lowest Marks: " + lowestMark);
 }
 }
